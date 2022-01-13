@@ -115,6 +115,11 @@ const App = () => {
     const squareBeingReplacedID = parseInt(
       squareBeingReplaced.getAttribute("data-id")
     );
+
+    currentColorArrangement[squareBeingReplacedID] =
+      squareBeingDragged.style.backgroundColor;
+    currentColorArrangement[squareBeingDraggedID] =
+      squareBeingReplaced.style.backgroundColor;
   };
 
   const createBoard = () => {
